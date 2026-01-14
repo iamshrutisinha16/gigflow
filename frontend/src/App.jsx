@@ -12,7 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Gigs />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<register />} />
+        <Route path="/register" element={<Register />} />
         <Route path= "/creategig" element={<CreateGig />} />
         <Route path="bidgig" element={<BidGig />} />
         <Route path="viewbids" element={<ViewBids />} />
