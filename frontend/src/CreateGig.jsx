@@ -13,7 +13,6 @@ export default function CreateGig() {
     e.preventDefault();
 
     try {
-      // JWT token fetch from localStorage
       const token = localStorage.getItem("token");
       if (!token) {
         alert("You must be logged in to post a gig.");
@@ -21,7 +20,7 @@ export default function CreateGig() {
       }
 
       await axios.post(
-        "http://localhost:5000/api/gigs",
+        "https://gigflow-1xze.onrender.com/api/gigs",
         { title, description, budget },
         {
           headers: {

@@ -12,7 +12,7 @@ export default function Gigs() {
 
   const fetchGigs = async () => {
     const res = await axios.get(
-      `http://localhost:5000/api/gigs?search=${search}`
+      `https://gigflow-1xze.onrender.com/api/gigs?search=${search}`
     );
     setGigs(res.data);
   };
@@ -31,7 +31,13 @@ export default function Gigs() {
             Login
           </Link>
 
-          {/* Corrected Post Gig button */}
+          <Link
+            to="/register"
+            className="px-4 py-2 border border-green-600 text-green-600 rounded hover:bg-green-50"
+          >
+            Register
+          </Link>
+
           <Link to="/creategig">
             <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
               Post Gig
@@ -65,9 +71,7 @@ export default function Gigs() {
               <p className="text-gray-600 mt-2">{g.description}</p>
 
               <div className="flex justify-between items-center mt-4">
-                <span className="text-green-600 font-bold">
-                  ₹{g.budget}
-                </span>
+                <span className="text-green-600 font-bold">₹{g.budget}</span>
 
                 <Link to={`/gigs/${g._id}/bid`}>
                   <button className="bg-green-600 text-white px-3 py-2 rounded">

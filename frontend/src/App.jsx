@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Login";
+import Register from "./Register";
 import Gigs from "./Gigs";
 import CreateGig from "./CreateGig";
 import BidGig from "./BidGig";
@@ -11,6 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Gigs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<register />} />
         <Route path= "/creategig" element={<CreateGig />} />
         <Route path="bidgig" element={<BidGig />} />
         <Route path="viewbids" element={<ViewBids />} />

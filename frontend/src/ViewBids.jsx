@@ -7,7 +7,7 @@ export default function ViewBids (){
     const [bids, setBids] = useState([]);
 
     useEffect(() => {
-    axios.get(`http://localhost:5000/api/bids/${id}`, {
+    axios.get(`https://gigflow-1xze.onrender.com/api/bids/${id}`, {
       withCredentials: true,
     })
       .then(res => setBids(res.data));

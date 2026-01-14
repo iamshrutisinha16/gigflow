@@ -9,7 +9,7 @@ export default function BidGig() {
   const [price, setPrice] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/gigs/${id}`)
+    axios.get(`https://gigflow-1xze.onrender.com/api/gigs/${id}`)
       .then(res => setGig(res.data));
   }, [id]);
 
